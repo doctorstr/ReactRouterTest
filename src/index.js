@@ -5,12 +5,12 @@ import {MainMenu} from './components/main'
 import {ControlBar} from './components/sidebar2'
 import {Footer} from './components/footer'
 import App from './components/app';
-
+import {Side} from './components/sidebar'
 import { Router } from 'react-router';
 
 
 window.React = React;
 
 render(<div>
-    <Router to='/dashboard' component={App} />
+    <Menu/><MainMenu/><App/><Footer/>
 </div>, document.getElementById('react-container'))

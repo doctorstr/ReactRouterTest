@@ -1,11 +1,11 @@
 import '../stylesheets/adminlte.css'
-import { IndexLink } from 'react-router'
+import { Link } from 'react-router-dom'
 import Fausers from 'react-icons/lib/fa/user'
 import Fafile from 'react-icons/lib/fa/file'
 import Fatimes from 'react-icons/lib/fa/times-circle'
 import React from 'react'
 
-export const Side = () => 
+export const Side = (props) => 
 
 <aside className="main-sidebar sidebar-dark-primary elevation-4">
 
@@ -23,12 +23,13 @@ export const Side = () =>
         </div>
 
         <nav className="mt-2">
-        <li><IndexLink activeClassName='active' to='/'>Home</IndexLink></li>&nbsp;
-        <li><IndexLink activeClassName='active' to='/posts'><Fausers /> Posts  </IndexLink></li>&nbsp;
-        <li><IndexLink activeClassName='active' to='/user-lists'><Fafile/> Users </IndexLink></li>&nbsp;
-        <li><IndexLink activeClassName='active' to='*'><Fatimes/> Whoops 404 </IndexLink></li>
+        <li><Link  to='/'>Home</Link></li>&nbsp;
+        <li><Link  to='/posts'><Fausers /> Posts  </Link></li>&nbsp;
+        <li><Link  to='/user-lists'><Fafile/> Users </Link></li>&nbsp;
+        <li><Link  to='*'><Fatimes/> Whoops 404 </Link></li>
         
      </nav>
+   
     </div>
 
 </aside>

@@ -1,9 +1,9 @@
 import React from 'react'
 import '../stylesheets/adminlte.css'
 import Details from './userdetails'
-import {Link} from 'react-router'
+import {Link} from 'react-router-dom'
 
-var reg = new RegExp(/[/]([0-9])+[/]?/);
+
 
 export default class MyTable extends React.Component {
 
@@ -81,7 +81,7 @@ export default class MyTable extends React.Component {
             this.state.id= i + 1;          
          
          let row = <Link to={{
-            pathname: `/user-lists/details(/${i+1})`
+            pathname: `/user-lists/details/${i+1}`
             
           }}>
          
