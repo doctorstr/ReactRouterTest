@@ -1,13 +1,11 @@
 import '../stylesheets/adminlte.css'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Fausers from 'react-icons/lib/fa/user'
 import Fafile from 'react-icons/lib/fa/file'
 import Fatimes from 'react-icons/lib/fa/times-circle'
 import React from 'react'
 
-export const Side = (props) => 
-
-<aside className="main-sidebar sidebar-dark-primary elevation-4">
+export const Side = (props) => <aside className="main-sidebar sidebar-dark-primary elevation-4">
 
     <a href="#" className="brand-link">
         <span className="brand-text font-weight-light">Dashboard</span>
@@ -23,13 +21,27 @@ export const Side = (props) =>
         </div>
 
         <nav className="mt-2">
-        <li><Link  to='/'>Home</Link></li>&nbsp;
-        <li><Link  to='/posts'><Fausers /> Posts  </Link></li>&nbsp;
-        <li><Link  to='/user-lists'><Fafile/> Users </Link></li>&nbsp;
-        <li><Link  to='*'><Fatimes/> Whoops 404 </Link></li>
-        
-     </nav>
-   
+            <li>
+                <Link to='/'>Home</Link>
+            </li>&nbsp;
+            <li>
+                <Link to='/posts'><Fausers/>
+                    Posts
+                </Link>
+            </li>&nbsp;
+            <li>
+                <Link to='/user'><Fafile/>
+                    Users
+                </Link>
+            </li>&nbsp;
+            <li>
+                <Link to='*'><Fatimes/>
+                    Whoops 404
+                </Link>
+            </li>
+
+        </nav>
+
     </div>
 
 </aside>

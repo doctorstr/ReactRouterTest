@@ -1,12 +1,10 @@
 import React from 'react'
 import MyTable from './table'
+import MyCard from './postcard';
 
 export default class Posts extends React.Component {
     constructor(props) {
         super(props);
-
-        
-
 
         this.columns = [
             {
@@ -21,14 +19,14 @@ export default class Posts extends React.Component {
             }
         ];
 
-        this.maxItems = 3;
+        this.maxItems = 4;
     };
 
     state = {
         pgNo: 0,
         table: [],
         isFetching: true,
-        url:"https://jsonplaceholder.typicode.com/posts/"
+        url: "/posts"
     };
     componentDidMount() {
         fetch("https://jsonplaceholder.typicode.com/posts")
@@ -39,8 +37,6 @@ export default class Posts extends React.Component {
             });
 
     }
-
-
 
     render() {
         return this.state.isFetching
@@ -53,7 +49,7 @@ export default class Posts extends React.Component {
                     <img src="/assets/index.svg"/>
                 </div>
             )
-            : (<MyTable
+            : (<MyCard
                 pgNo
                 ={this.state.pgNo}
                 maxItems={this.maxItems}
@@ -63,5 +59,3 @@ export default class Posts extends React.Component {
     }
 
 }
-
-

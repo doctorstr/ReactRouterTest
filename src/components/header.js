@@ -1,38 +1,44 @@
 import '../stylesheets/adminlte.css'
-
+import {Link} from 'react-router-dom'
 
 export const Menu = () =>
 
+<div className="row"><div className="col-md-6 offset-md-3">
+<nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <a className="navbar-brand" href="#">Dashboard</a>
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
+  </button>
 
-<nav className="main-header navbar navbar-expand bg-white navbar-light border-bottom">
-
-  <ul className="navbar-nav">
-    <li className="nav-item">
-      <a className="nav-link" data-widget="pushmenu" href="#"><i className="fa fa-bars"></i></a>
-    </li>
-    <li className="nav-item d-none d-sm-inline-block">
-      <a href="#" className="nav-link">Home</a>
-    </li>
-    <li className="nav-item d-none d-sm-inline-block">
-      <a href="#" className="nav-link">Contact</a>
-    </li>
-  </ul>
-
-
-  <form className="form-inline ml-3">
-    <div className="input-group input-group-sm">
-      <input className="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search"/>
-      <div className="input-group-append">
-        <button className="btn btn-navbar" type="submit">
-          <i className="fa fa-search"></i>
-        </button>
-      </div>
-    </div>
-  </form>
-  <ul className="navbar-nav ml-auto">
-  <li className="nav-item">
-        <a className="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
-            className="fa fa-th-large"></i></a>
+  <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul className="navbar-nav mr-auto">
+      <li className="nav-item active">
+        <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
       </li>
-</ul>
-  </nav>
+      <li className="nav-item dropdown">
+        <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Users
+        </Link>
+        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <Link className="dropdown-item" to="/user"> Users </Link>
+          <Link className="dropdown-item" to="/user/addnew/user">Register User</Link>
+        </div>
+      </li>
+      <li className="nav-item dropdown">
+        <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Posts
+        </Link>
+        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <Link className="dropdown-item" to="/posts">All Posts</Link>
+          <Link className="dropdown-item" to="/posts/addnew/posts">Add a Post</Link>
+          </div>
+      </li>
+      
+    </ul>
+    <form className="form-inline my-2 my-lg-0">
+      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+</div></div>

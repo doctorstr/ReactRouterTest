@@ -1,7 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router'
-import MyTable from './table'
-export default class UserDetails extends React.Component {
+export default class PostDetails extends React.Component {
 
     constructor(props) {
         super(props);
@@ -15,7 +13,7 @@ export default class UserDetails extends React.Component {
 
     componentDidMount() {
 
-        fetch('https://jsonplaceholder.typicode.com/users/' + this.props.match.params.id)
+        fetch('https://jsonplaceholder.typicode.com/posts/' + this.props.match.params.id)
             .then(response => response.json())
             .then(res => {
 
@@ -40,21 +38,14 @@ export default class UserDetails extends React.Component {
                         <strong>ID</strong>
                         : {this.state.details.id}</p>
                     <p>
-                        <strong>Name</strong>
-                        : {this.state.details.name}</p>
+                        <strong>User Id</strong>
+                        : {this.state.details.userId}</p>
                     <p>
-                        <strong>UserName</strong>
-                        : {this.state.details.username}</p>
+                        <strong>Title</strong>
+                        : {this.state.details.title}</p>
                     <p>
-                        <strong>Phone</strong>
-                        : {this.state.details.phone}</p>
-                    <p>
-                        <strong>Website</strong>
-                        : {this.state.details.website}</p>
-                    <p>
-                        <strong>Email</strong>
-                        : {this.state.details.email}</p>
-
+                        <strong>Body</strong>
+                        : {this.state.details.body}</p>
                 </div>
             </div>
         );

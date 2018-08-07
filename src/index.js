@@ -6,11 +6,9 @@ import {ControlBar} from './components/sidebar2'
 import {Footer} from './components/footer'
 import App from './components/app';
 import {Side} from './components/sidebar'
-import { Router } from 'react-router';
-
-
+import {Router} from 'react-router';
 window.React = React;
 
 render(<div>
-    <Menu/><MainMenu/><App/><Footer/>
+    <App/>
 </div>, document.getElementById('react-container'))

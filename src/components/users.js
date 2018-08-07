@@ -33,7 +33,7 @@ export default class Table extends React.Component {
         pgNo: 0,
         table: [],
         isFetching: true,
-        url:"https://jsonplaceholder.typicode.com/users/"
+        url:"/user"
     
     };
     componentDidMount() {
